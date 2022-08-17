@@ -16,9 +16,9 @@
     background-color: #121212;
     color: #ffffff;
    }
-   /* .dark:active{
+   .dark:active{
     background-color: #ffffff;
-   } */
+   }
   </style>
   <link rel="stylesheet" href="assets/css/color.css">
   <link rel="stylesheet" href="assets\css\component-custom-switch.css">
@@ -60,12 +60,21 @@
         </div>
       </div>
       <div align="right" class="mb-3">
-        <button type="button" class="btn btn-dark" id="dark" onclick="myFunction()">Dark</button>
+        <button type="button" class="btn btn-dark" id="dark" onclick="myFunction(),btnColor()">Dark</button>
         <script type="text/javascript">
         function myFunction() {
           var element = document.body;
           element.classList.toggle("dark-mode")
-          alert(document.getElementById("dark").style.backgroundColor);
+        }
+        function btnColor(){
+          var bg = document.getElemntById("dark").style.backgroundColor;
+          if(bg == '#343a40')
+          {
+            bg='#eaebeb';
+          }
+          else{
+            bg='#343a40';
+          }
         }
         </script>     
       </div>
