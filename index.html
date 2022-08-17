@@ -16,6 +16,9 @@
     background-color: #121212;
     color: #ffffff;
    }
+   /* .dark:active{
+    background-color: #ffffff;
+   } */
   </style>
   <link rel="stylesheet" href="assets/css/color.css">
   <link rel="stylesheet" href="assets\css\component-custom-switch.css">
@@ -51,20 +54,21 @@
           </nav>
         </div>
         <div class="menu__wrapper col-md-12 d-lg-none">
-          <button type="button" class="menu__mobile-button">
+          <button type="button" class="menu__mobile-button" >
             <span><i class="fa fa-bars" aria-hidden="true"></i></span>
           </button>
         </div>
       </div>
-      <!-- <div align="right"  style="margin-top: -3rem;">
-        <button type="button" class="btn btn-dark" onclick="myFunction()">Dark</button>
+      <div align="right" class="mb-3">
+        <button type="button" class="btn btn-dark" id="dark" onclick="myFunction()">Dark</button>
         <script type="text/javascript">
         function myFunction() {
           var element = document.body;
-          element.classList.toggle("dark-mode");
+          element.classList.toggle("dark-mode")
+          alert(document.getElementById("dark").style.backgroundColor);
         }
         </script>     
-      </div> -->
+      </div>
     </div>
 
   </div>
